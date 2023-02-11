@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment_Movie_Library</title>
+</head>
+<body>
+    <div style="width: fit-content;">
+        <input id="title" style="padding: 2px; margin: 5px; font-weight: bold; font-size:16px;" type="text" placeholder="Enter Title to search.." >
+        <input id="genre" style="padding: 2px; margin: 5px; font-weight: bold; font-size:16px;" type="text" placeholder="Enter Genre to search..">
+        <button id="search" style="margin: 5px; font-size: 16px;" onclick="getResults()">Search</button>
+        <button id="sortByTitle" style="margin: 5px; font-size: 12px;" onclick="sortByTitle()"><i><b>Sort By Title</b></i></button>
+        <button id="sortByGenre" style="margin: 5px; font-size: 12px;" onclick="sortByGenre()"><i><b>Sort By Genre</b></i></button>
+        <label for="searches" style="display: block; margin-top: 15px;">Search By:</label>
+        <select id="searches" style="font-size: 16px; margin: 5px;" onchange="getResultsByDropdown()">
+            <option value="select">Select</option>
+            <option value="title">Title</option>
+            <option value="genre">Genre</option>
+            <option value="both">Title&Genre</option>
+        </select>
+        <ul id="results"></ul>
+        <div>
+            <ul id="countResult"></ul>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
